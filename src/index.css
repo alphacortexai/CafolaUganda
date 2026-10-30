@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: Merriweather, ui-serif, Georgia, "Times New Roman", serif;
+  --color-teal: #007e8a;
+  --color-teal-dark: #1b7a7a;
+  --color-navy: #2c3e50;
+  --color-orange: #ff8c42;
+  --color-gray-text: #6c757d;
+  --color-gray-dark: #212529;
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility description-text {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #fff;
+    color: #212529;
+    font-family: var(--font-sans);
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  #services,
+  #contact {
+    scroll-margin-top: 7rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1280px;
+    padding-inline: 4rem;
+  }
+}
